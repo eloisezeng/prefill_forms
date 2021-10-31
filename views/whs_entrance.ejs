@@ -1,0 +1,25 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <a href="/wrt" class="btn btn-primary">Go to WRT Page</a>
+        <a href="/whs-test-kit" class="btn btn-primary">Go to WHS Test Kit Page</a>
+        <div class="card card-body">
+            <h1 class="text-center mb-3">Wellesley High School- Entrance<br>Prefilled Form Links</h1>
+            <p style="text-align: center;">Tired of filling out this
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScEzce3ijX91IC8-IAIelCQwHZyQODuRghqYLBmTnwnIqR17w/viewform" target="_blank">
+                    COVID-19 form?
+                </a><br>Get your prefilled links today.</p>
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="name" id="fname" name="fname" class="form-control" placeholder="Enter First Name" value="<%= fname %>" autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="name" id="lname" name="lname" class="form-control" placeholder="Enter Last Name" value="<%= lname %>" autocomplete="family-name" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Generate Links</button>
+            </form>
+            <%- include('./whs_entrance_links'); %>
+        </div>
+        <%- include('./footer'); %>
+    </div>

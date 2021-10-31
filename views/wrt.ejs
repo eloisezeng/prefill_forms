@@ -1,0 +1,25 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <a href="/" class="btn btn-primary">Go to WHS Page</a>
+        <a href="/whs-test-kit" class="btn btn-primary">Go to WHS Test Kit Page</a>
+        <div class="card card-body">
+            <h1 class="text-center mb-3">Wellesley Robotics Team<br>Prefilled Form Link</h1>
+            <p style="text-align: center;">Tired of filling out this
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfolfCGPR-H51MoOCCBNVDMLrcCoKL2qD5OPTOZ2mZjhVu2DA/viewform" target="_blank">
+                    Daily Health Questionnaire?
+                </a><br>Get your prefilled link today.</p>
+            <form action="/wrt" method="POST">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email Address" value="<%= email %>" autocomplete="email" />
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="name" id="name" name="name" class="form-control" placeholder="Enter Full Name" value="<%= name %>" autocomplete="name" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Generate Links</button>
+            </form>
+            <%- include('./wrt_link'); %>
+        </div>
+        <%- include('./footer'); %>
+    </div>

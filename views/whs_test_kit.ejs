@@ -1,0 +1,41 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <a href="/wrt" class="btn btn-primary">Go to WRT Page</a>
+        <a href="/" class="btn btn-primary">Go to WHS Entrance Page</a>
+        <div class="card card-body">
+            <h1 class="text-center mb-3">Wellesley High School- Test Kit<br>Prefilled Form Links</h1>
+            <p style="text-align: center;">Tired of filling out this
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVQPHn_pc3tTXwDZYlb-j-7EJfEK29wHyfpGnbONyWP51tug/viewform" target="_blank">
+                    COVID-19 form?
+                </a><br>Get your prefilled links today.</p>
+            <form action="/whs-test-kit" method="POST">
+                <div class="form-group">
+                    <label for="fname">Staff/Student First Name (Legal name please- no nicknames)</label>
+                    <input type="name" id="fname" name="fname" class="form-control" value="<%= fname %>" placeholder="Enter First Name" autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name (Legal name please- no nicknames)</label>
+                    <input type="name" id="lname" name="lname" class="form-control" value="<%= lname %>" placeholder="Enter Last Name" autocomplete="family-name" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address of staff or Parent/Guardian of student</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter email address" value="<%= email %>"/>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter Phone #" value="<%= phone %>"/>
+                </div>
+                <div class="form-group">
+                    <label for="consent">Consent Agreement- Do you consent? </label>
+                    <input type="name" id="consent" name="consent" class="form-control" placeholder="Enter y or n" value="<%= consent %>"/>
+                </div>
+                <div class="form-group">
+                    <label for="staff_or_student">Consent Agreement- Do you consent? </label>
+                    <input type="name" id="staff_or_student" name="staff_or_student" class="form-control" placeholder="Enter y or n" value="<%= staff_or_student %>"/>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Generate Links</button>
+            </form>
+            <%- include('./whs_test_kit_links'); %>
+        </div>
+        <%- include('./footer'); %>
+    </div>
